@@ -1,0 +1,64 @@
+/* layout dasar */
+body{
+  margin:0;
+  font-family:"Segoe UI",sans-serif;
+  background:#fafafa;
+  padding:40px 20px;
+  display:flex;
+  justify-content:center;
+}
+.accordion{
+  width:100%;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* card */
+.card{
+  display:grid;
+  grid-template-rows:auto 0fr;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+  cursor:pointer;
+  transition:grid-template-rows .45s cubic-bezier(.22,1,.36,1);
+}
+.card:active{transform:scale(.99);}
+
+/* header */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+  user-select:none;
+}
+.header h3{margin:0;font-size:1.05rem;}
+.arrow{
+  font-size:.9rem;
+  transition:transform .4s;
+}
+
+/* body (tersembunyi default) */
+.body{
+  display:grid;
+  overflow:hidden;
+  background:#f7f7f7;
+  padding:0 20px;
+}
+.body p{margin:8px 0 18px;}
+.close{
+  display:inline-block;
+  font-size:.8rem;
+  color:#007bff;
+  margin-bottom:18px;
+}
+
+/* state terbuka */
+input[name="card"]:checked + .card{
+  grid-template-rows:auto 1fr;
+}
+input[name="card"]:checked + .card .arrow{transform:rotate(180deg);}
