@@ -1,0 +1,47 @@
+/* --- RESET --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* --- CENTER PAGE --- */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* --- CARD --- */
+.card {
+  width: 260px;
+  height: 140px;
+  background: linear-gradient(135deg, #ff0055, #ff00c8);
+  border-radius: 16px;
+  padding: 28px 24px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(255, 0, 100, 0.25);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- HOVER EXPAND --- */
+.card:hover {
+  width: 320px;
+  height: 200px;
+  box-shadow: 0 12px 40px rgba(255, 0, 100, 0.45);
+}
+
+/* --- TYPO --- */
+h1 { font-size: 28px; letter-spacing: 1px; }
+h2 { font-size: 18px; font-weight: 400; opacity: 0.9; }
+p  { font-size: 14px; opacity: 0.7; }
+.hint {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  align-self: flex-end;
+}
