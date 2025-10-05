@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Expand Left ↔ Right</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card" data-dir="left"><span>KIRI →</span></div>
+    <div class="card" data-dir="right"><span>← KANAN</span></div>
+  </div>
+
+  <!-- fallback JS (hapus saja kalau browser sudah mendukung :has()) -->
+  <script>
+    if (!CSS.supports('selector(:has(*))')) {
+      document.body.classList.add('no-has');
+      document.querySelectorAll('.card').forEach(c => {
+        c.addEventListener('mouseenter', () => c.classList.add('expand'));
+        c.addEventListener('mouseleave', () => c.classList.remove('expand'));
+      });
+    }
+  </script>
+</body>
+</html>
