@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expanding Card Smooth</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="card" onclick="toggleCard(this)">
+    <img src="https://picsum.photos/400/200?random=1" alt="Thumbnail" class="thumb"/>
+    <div class="card-header">
+      <h3>Project Alpha</h3>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="card-body">
+      <p>Ini adalah deskripsi lengkap dari Project Alpha. Kamu bisa menambahkan teks, daftar fitur, atau tautan ke demo.</p>
+      <button onclick="event.stopPropagation(); toggleCard(this.closest('.card'))">Tutup</button>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+    <img src="https://picsum.photos/400/200?random=2" alt="Thumbnail" class="thumb"/>
+    <div class="card-header">
+      <h3>Project Beta</h3>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="card-body">
+      <p>Project Beta menggunakan teknologi modern seperti React dan Tailwind. Cocok untuk aplikasi skala menengah.</p>
+      <button onclick="event.stopPropagation(); toggleCard(this.closest('.card'))">Tutup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
