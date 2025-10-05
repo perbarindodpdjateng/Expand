@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS-Only Accordion Card</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<form class="accordion">
+  <!-- Card 1 -->
+  <input type="radio" name="card" id="c1" hidden>
+  <label class="card" for="c1">
+    <img src="https://picsum.photos/400/200?random=1" alt="" class="thumb"/>
+    <div class="header">
+      <h3>Project Alpha</h3>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="body">
+      <p>Deskripsi lengkap Project Alpha. Tanpa JS, tanpa klik ganda, animasi smooth.</p>
+      <span class="close">▲ tutup</span>
+    </div>
+  </label>
+
+  <!-- Card 2 -->
+  <input type="radio" name="card" id="c2" hidden>
+  <label class="card" for="c2">
+    <img src="https://picsum.photos/400/200?random=2" alt="" class="thumb"/>
+    <div class="header">
+      <h3>Project Beta</h3>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="body">
+      <p>Project Beta menggunakan Teknologi CSS Grid &amp; Radio-Hack. Buka 1, tutup otomatis.</p>
+      <span class="close">▲ tutup</span>
+    </div>
+  </label>
+
+  <!-- Card 3 -->
+  <input type="radio" name="card" id="c3" hidden>
+  <label class="card" for="c3">
+    <img src="https://picsum.photos/400/200?random=3" alt="" class="thumb"/>
+    <div class="header">
+      <h3>Project Gamma</h3>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="body">
+      <p>Ini adalah contoh card ketiga. Semua pakai CSS semata.</p>
+      <span class="close">▲ tutup</span>
+    </div>
+  </label>
+</form>
+
+</body>
+</html>
